@@ -34,25 +34,33 @@ const Toolbar: React.FC<ToolbarProps> = ({ displayState, setDisplayState }) => {
             />
             <span className="ml-2">{mirrors.length}</span>
           </div>
-          <div className="flex items-center">
-            <label htmlFor="lightRays" className="mr-2 text-sm font-medium">
-              Show virtual mirrors
-            </label>
-            <input
-              id="lightRays"
-              type="checkbox"
-              checked={displayState.showVirtualMirrors}
-              onChange={(e) => setDisplayState('showVirtualMirrors', e.target.checked)}
-              className="h-4 w-4"
-            />
-          </div>
+          {mirrors.length > 1 ? (
+            <div className="flex items-center">
+              <label htmlFor="lightRays" className="mr-2 text-sm font-medium">
+                Show virtual mirrors
+              </label>
+              <input
+                id="lightRays"
+                type="checkbox"
+                checked={displayState.showVirtualMirrors}
+                onChange={(e) =>
+                  setDisplayState("showVirtualMirrors", e.target.checked)
+                }
+                className="h-4 w-4"
+              />
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
         <div>
-          <em className="text-xs">click to drag mirror, observer, and object</em>
+          <em className="text-xs">
+            click to drag mirror, observer, and object
+          </em>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Toolbar;
