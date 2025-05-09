@@ -30,7 +30,7 @@ export const drawMirrors = (
   ctx: CanvasRenderingContext2D,
   mirrors: MirrorProps[]
 ) => {
-  mirrors.forEach((mirror) => {
+  mirrors.forEach((mirror, index) => {
     // Save context
     ctx.save();
 
@@ -48,6 +48,15 @@ export const drawMirrors = (
     const halfHeight = mirror.height / 2;
     ctx.fillRect(-halfWidth, -halfHeight, mirror.width, mirror.height);
     ctx.strokeRect(-halfWidth, -halfHeight, mirror.width, mirror.height);
+
+    // Add label
+    ctx.fillStyle = "#000000";
+    ctx.font = "11px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.rotate(-Math.PI/2); // Convert degrees to radians
+    ctx.fillText(`mirror ${index + 1}`, 0, -10);
 
     // Restore context
     ctx.restore();
@@ -78,6 +87,13 @@ export const drawObjects = (
     ctx.lineWidth = 1;
     ctx.fill();
     ctx.stroke();
+
+    ctx.fillStyle = "#000000";
+    ctx.font = "11px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(`object`, 0, -object.size);
 
     ctx.restore();
   });
