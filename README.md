@@ -6,7 +6,7 @@ This was a really fun and challenging problem to work on! Below are some reflect
 
 <img src="https://github.com/user-attachments/assets/c8d3b462-33d6-4f69-bf23-55c6499048ca" alt="Image of parallel mirrors reflecting a yellow toolbox that is in frame" height="500">
 <br/>
-<em>Image of parallel mirrors reflecting a yellow toolbox that is in frame</em><br/>
+<em>Image of parallel mirrors reflecting a yellow toolbox that is in frame</em><br/><br/>
 
 ~20 minutes getting the project set up with Vite/React/Typescript, and ~5 hours coding the actual interactive piece. I spent the biggest chunk of time working on getting the rays to bounce between the two mirrors at accurate angles. 
 
