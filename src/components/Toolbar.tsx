@@ -53,10 +53,11 @@ const Toolbar: React.FC<ToolbarProps> = ({ displayState, setDisplayState }) => {
             <></>
           )}
         </div>
-        <div>
-          <em className="text-xs">
+        <div className="flex items-center gap-6 text-xs">
+          <em>
             click to drag mirror, observer, and object
           </em>
+          <a className="underline hover:no-underline" href='https://github.com/shelbywilson/reflections/blob/main/README.md' target="_blank">about</a>
         </div>
       </div>
     </div>
